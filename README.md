@@ -28,6 +28,8 @@ The script will return the coordinates in plain-text format as "latitude,longitu
 52.5192,13.4061
 ```
 
+or HTTP 400 Bad request
+
 # Used in
 
 https://github.com/acorbi/ok-directory-public

@@ -30,9 +30,12 @@
     $gps_coordinates = $obj->results[0]->locations[0]->latLng->lat.",".$obj->results[0]->locations[0]->latLng->lng;
     curl_close($ch);
 
-    file_put_contents($filename,$gps_coordinates);
-
-    echo $gps_coordinates;
+    if ($gps_coordinates == ","){
+      header('HTTP/1.1 400 Bad Request');
+    }else{
+      file_put_contents($filename,$gps_coordinates);
+      echo $gps_coordinates;
+    }
 
   }
 

@@ -16,13 +16,13 @@ First you need to register for a Mapquest API under http://www.mapquestapi.com/g
 
 # How to use
 
-Client has to GET-Request the geocoder_cacher.php file setting the **location** parameter with <country>+<city>, example:
+Client has to GET-Request the geocoder_cacher.php file setting the **location** parameter with "country+city", example:
 
 ```
 GET http://server/geocoder_cacher.php?location=Germany+Berlin
 ```
 
-The script will return the coordinates in plain-text format as <latitude>,<longitude>, example:
+The script will return the coordinates in plain-text format as "latitude,longitude", example:
 
 ```
 52.5192,13.4061

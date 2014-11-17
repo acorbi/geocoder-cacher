@@ -31,9 +31,13 @@
     curl_close($ch);
 
     if ($gps_coordinates == ","){
+
       header('HTTP/1.1 400 Bad Request');
+      
     }else{
       file_put_contents($filename,$gps_coordinates);
+
+      header("Content-type: text/plain; charset=utf-8");
       echo $gps_coordinates;
     }
 

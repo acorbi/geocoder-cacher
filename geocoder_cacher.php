@@ -27,7 +27,7 @@
 
     $json = curl_exec($ch);
     $obj = json_decode($json);
-    $gps_coordinates = $obj->results[0]->locations[0]->latLng->lng.",".$obj->results[0]->locations[0]->latLng->lat;
+    $gps_coordinates = $obj->results[0]->locations[0]->latLng->lat.",".$obj->results[0]->locations[0]->latLng->lng;
     curl_close($ch);
 
     file_put_contents($filename,$gps_coordinates);

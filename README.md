@@ -22,10 +22,10 @@ Client has to GET-Request the geocoder_cacher.php file setting the **location** 
 GET http://server/geocoder_cacher.php?location=Germany+Berlin
 ```
 
-The script will return the coordinates in plain-text format as <longitude>,<latitude>, example:
+The script will return the coordinates in plain-text format as <latitude>,<longitude>, example:
 
 ```
-13.4061,52.5192
+52.5192,13.4061
 ```
 
 # Used in

@@ -18,7 +18,7 @@
 
     $parameters = explode("_", $location);
 
-    $url = 'http://www.mapquestapi.com/geocoding/v1/address?key='.$settings["mapquest_api_key"].'&country='.$parameters[0].'&city='.$parameters[1];
+    $url = 'http://open.mapquestapi.com/geocoding/v1/address?key='.$settings["mapquest_api_key"].'&country='.$parameters[0].'&city='.$parameters[1];
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -33,7 +33,7 @@
     if ($gps_coordinates == ","){
 
       header('HTTP/1.1 400 Bad Request');
-      
+
     }else{
       file_put_contents($filename,$gps_coordinates);
 

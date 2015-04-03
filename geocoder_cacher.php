@@ -3,6 +3,8 @@
   ini_set('display_errors', 1);
   require_once('config.php');
 
+  header('Access-Control-Allow-Origin: *');
+
   /** Get parameter */
   $location = $_GET['location'];
 
